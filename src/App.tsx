@@ -52,15 +52,15 @@ function App() {
           {/* Scroll driver: PAGES screens tall */}
           <div
             ref={containerRef}
-            style={{ height: `${PAGES * 100}vh` }}
+            style={{ height: `${PAGES * 100}dvh` }}
           >
-            <div className="sticky top-0 h-screen overflow-hidden">
+            <div className="sticky top-0 overflow-hidden" style={{ height: '100dvh' }}>
               <motion.div
-                style={{ x, willChange: 'transform' }}
-                className="flex h-screen"
+                style={{ x, willChange: 'transform', height: '100dvh' }}
+                className="flex"
               >
                 {/* Page 0 — Hero */}
-                <div className="w-screen h-screen flex-shrink-0 flex flex-col items-center justify-center px-6 text-center">
+                <div className="w-screen flex-shrink-0 flex flex-col items-center justify-center px-6 text-center" style={{ height: '100dvh' }}>
                   <motion.h1
                     className="text-4xl md:text-6xl font-light text-blue-50 mb-6 tracking-wide"
                     style={{ filter: 'drop-shadow(0 0 20px rgba(160,200,255,0.5))' }}
@@ -87,17 +87,17 @@ function App() {
                 </div>
 
                 {/* Page 1 — Wishes */}
-                <div className="w-screen h-screen flex-shrink-0 overflow-hidden">
+                <div className="w-screen flex-shrink-0 overflow-hidden" style={{ height: '100dvh' }}>
                   <Section5 scrollYProgress={scrollYProgress} pageIndex={1} totalPages={PAGES} />
                 </div>
 
                 {/* Page 2 — Updates */}
-                <div className="w-screen h-screen flex-shrink-0 overflow-hidden">
+                <div className="w-screen flex-shrink-0 overflow-hidden" style={{ height: '100dvh' }}>
                   <Section4 scrollYProgress={scrollYProgress} pageIndex={2} totalPages={PAGES} />
                 </div>
 
                 {/* Page 3 — Finale */}
-                <div className="w-screen h-screen flex-shrink-0 overflow-hidden">
+                <div className="w-screen flex-shrink-0 overflow-hidden" style={{ height: '100dvh' }}>
                   <Finale scrollYProgress={scrollYProgress} pageIndex={3} totalPages={PAGES} />
                 </div>
               </motion.div>
