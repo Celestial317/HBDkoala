@@ -46,7 +46,7 @@ const Finale = ({ scrollYProgress, pageIndex, totalPages }: FinaleProps) => {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-start px-6 py-10 overflow-y-auto">
+    <div className="w-full h-full flex flex-col items-center justify-evenly px-4 sm:px-6 py-4 overflow-hidden">
       {/* Soft glow */}
       <div
         className="fixed inset-0 pointer-events-none z-0"
@@ -56,26 +56,26 @@ const Finale = ({ scrollYProgress, pageIndex, totalPages }: FinaleProps) => {
       {/* Title */}
       <motion.div
         style={{ opacity: titleOp, y: titleY }}
-        className="text-center mb-10 relative z-10"
+        className="text-center relative z-10 flex-shrink-0"
       >
         <h1
-          className="text-4xl md:text-6xl font-light text-white"
+          className="text-2xl sm:text-3xl md:text-5xl font-light text-white"
           style={{ filter: 'drop-shadow(0 0 28px rgba(255,255,255,0.55))' }}
         >
           Happy Birthday Gaurvi! 💙
         </h1>
         <motion.div
-          className="flex items-center justify-center gap-8 mt-6"
-          animate={{ y: [0, -10, 0] }}
+          className="flex items-center justify-center gap-6 mt-2"
+          animate={{ y: [0, -8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <span className="text-5xl">🐨</span>
-          <span className="text-4xl">🐧</span>
+          <span className="text-3xl sm:text-4xl">🐨</span>
+          <span className="text-2xl sm:text-3xl">🐧</span>
         </motion.div>
       </motion.div>
 
       {/* Polaroids */}
-      <div className="flex flex-col md:flex-row gap-10 md:gap-14 items-center justify-center mb-10 relative z-10">
+      <div className="flex flex-row gap-5 sm:gap-10 items-center justify-center relative z-10 flex-shrink-0">
         {polaroids.map((p, i) => (
           <motion.div
             key={i}
@@ -86,7 +86,7 @@ const Finale = ({ scrollYProgress, pageIndex, totalPages }: FinaleProps) => {
               filter: 'drop-shadow(0 8px 24px rgba(0,0,0,0.4))',
             }}
             whileHover={{ scale: 1.05, rotate: 0 }}
-            className="relative bg-white p-3 pb-10 w-52 md:w-60 flex-shrink-0"
+            className="relative bg-white p-2 pb-7 w-32 sm:w-40 md:w-48 flex-shrink-0"
           >
             {/* Push-pin */}
             <div
@@ -107,7 +107,7 @@ const Finale = ({ scrollYProgress, pageIndex, totalPages }: FinaleProps) => {
             </div>
 
             {/* Caption */}
-            <p className="text-center text-gray-700 text-xs font-light leading-snug px-1">
+            <p className="text-center text-gray-700 text-[10px] sm:text-xs font-light leading-snug px-1">
               {p.caption}
             </p>
           </motion.div>
@@ -117,8 +117,8 @@ const Finale = ({ scrollYProgress, pageIndex, totalPages }: FinaleProps) => {
       {/* Final message */}
       <motion.p
         style={{ opacity: msgOp, y: msgY, filter: 'drop-shadow(0 0 10px rgba(160,200,255,0.3))' }}
-        className="max-w-md text-center text-lg text-blue-100 font-light leading-relaxed relative z-10"
->
+        className="max-w-sm sm:max-w-md text-center text-xs sm:text-sm text-blue-100 font-light leading-relaxed relative z-10 flex-shrink-0 px-4"
+      >
   Here’s to another year of you being absolutely, wonderfully, irreplaceably you. 🌙 <br /><br />
   Never forget to ping up whenever you need me ;) <br />
   ~ Well wishes from Chikki🐧

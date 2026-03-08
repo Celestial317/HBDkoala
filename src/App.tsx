@@ -87,17 +87,17 @@ function App() {
                 </div>
 
                 {/* Page 1 — Wishes */}
-                <div className="w-screen h-screen flex-shrink-0 overflow-y-auto overflow-x-hidden">
+                <div className="w-screen h-screen flex-shrink-0 overflow-hidden">
                   <Section5 scrollYProgress={scrollYProgress} pageIndex={1} totalPages={PAGES} />
                 </div>
 
                 {/* Page 2 — Updates */}
-                <div className="w-screen h-screen flex-shrink-0 overflow-y-auto overflow-x-hidden">
+                <div className="w-screen h-screen flex-shrink-0 overflow-hidden">
                   <Section4 scrollYProgress={scrollYProgress} pageIndex={2} totalPages={PAGES} />
                 </div>
 
                 {/* Page 3 — Finale */}
-                <div className="w-screen h-screen flex-shrink-0 overflow-y-auto overflow-x-hidden">
+                <div className="w-screen h-screen flex-shrink-0 overflow-hidden">
                   <Finale scrollYProgress={scrollYProgress} pageIndex={3} totalPages={PAGES} />
                 </div>
               </motion.div>

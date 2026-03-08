@@ -36,11 +36,10 @@ const WishCard = ({
 
   return (
     <motion.div
-      style={{ x: xVal, opacity: opVal, boxShadow: '0 6px 36px rgba(140,80,255,0.16)' }}
-      className="backdrop-blur-lg bg-purple-400/15 border border-purple-300/35 rounded-2xl px-5 py-5 sm:px-7 sm:py-6"
-      whileHover={{ scale: 1.016, boxShadow: '0 8px 48px rgba(160,80,255,0.28)' }}
+      style={{ x: xVal, opacity: opVal, boxShadow: '0 4px 24px rgba(140,80,255,0.14)' }}
+      className="backdrop-blur-lg bg-purple-400/15 border border-purple-300/35 rounded-xl px-3 py-2.5 sm:px-5 sm:py-3 flex-1 min-h-0 flex items-center"
     >
-      <p className="text-sm sm:text-base md:text-lg text-purple-100 leading-relaxed font-light">
+      <p className="text-xs sm:text-sm text-purple-100 leading-relaxed font-light">
         {text}
       </p>
     </motion.div>
@@ -58,15 +57,15 @@ const Section5 = ({ scrollYProgress, pageIndex, totalPages }: Section5Props) => 
   const titleOp = useTransform(scrollYProgress, [pageStart, pageStart + span * 0.3], [0, 1]);
 
   return (
-    <div className="w-full h-full flex flex-col items-center px-4 sm:px-6 py-8 sm:py-12 overflow-y-auto overflow-x-hidden">
+    <div className="w-full h-full flex flex-col items-center px-4 sm:px-6 py-4 sm:py-6 overflow-hidden">
       <motion.h2
         style={{ x: titleX, opacity: titleOp, filter: 'drop-shadow(0 0 18px rgba(200,180,255,0.45))' }}
-        className="text-2xl sm:text-3xl md:text-4xl font-light text-purple-100 mb-6 sm:mb-10 text-center flex-shrink-0"
+        className="text-xl sm:text-2xl md:text-3xl font-light text-purple-100 mb-3 text-center flex-shrink-0"
       >
         The Wishes
       </motion.h2>
 
-      <div className="max-w-xl w-full flex flex-col gap-4 sm:gap-5 flex-shrink-0">
+      <div className="max-w-xl w-full flex flex-col gap-1.5 sm:gap-2 flex-1 min-h-0">
         {wishesBoxes.map((text, i) => (
           <WishCard
             key={i}
