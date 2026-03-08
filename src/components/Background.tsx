@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Background = () => {
   const stars = useMemo(() =>
-    Array.from({ length: 180 }, (_, i) => ({
+    Array.from({ length: 60 }, (_, i) => ({
       id: i,
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
@@ -16,7 +16,7 @@ const Background = () => {
   , []);
 
   const glowStars = useMemo(() =>
-    Array.from({ length: 22 }, (_, i) => ({
+    Array.from({ length: 8 }, (_, i) => ({
       id: i,
       top: `${Math.random() * 95}%`,
       left: `${Math.random() * 95}%`,
@@ -79,7 +79,7 @@ const Background = () => {
             height: `${star.size}px`,
             backgroundColor: star.color,
           }}
-          animate={{ opacity: [0.04, star.peakOpacity, 0.04], scale: [1, 1.5, 1] }}
+          animate={{ opacity: [0.04, star.peakOpacity, 0.04] }}
           transition={{
             duration: star.duration,
             repeat: Infinity,
@@ -100,14 +100,7 @@ const Background = () => {
             width: `${star.size}px`,
             height: `${star.size}px`,
           }}
-          animate={{
-            opacity: [0.25, 1, 0.25],
-            boxShadow: [
-              `0 0 ${star.size}px rgba(160,210,255,0.3)`,
-              `0 0 ${star.size * 5}px rgba(160,210,255,0.95), 0 0 ${star.size * 10}px rgba(80,160,255,0.4)`,
-              `0 0 ${star.size}px rgba(160,210,255,0.3)`,
-            ],
-          }}
+          animate={{ opacity: [0.25, 0.9, 0.25] }}
           transition={{
             duration: star.duration,
             repeat: Infinity,

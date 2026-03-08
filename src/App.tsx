@@ -56,7 +56,7 @@ function App() {
           >
             <div className="sticky top-0 h-screen overflow-hidden">
               <motion.div
-                style={{ x }}
+                style={{ x, willChange: 'transform' }}
                 className="flex h-screen"
               >
                 {/* Page 0 — Hero */}

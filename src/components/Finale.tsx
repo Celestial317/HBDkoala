@@ -59,8 +59,7 @@ const Finale = ({ scrollYProgress, pageIndex, totalPages }: FinaleProps) => {
         className="text-center relative z-10 flex-shrink-0"
       >
         <h1
-          className="text-2xl sm:text-3xl md:text-5xl font-light text-white"
-          style={{ filter: 'drop-shadow(0 0 28px rgba(255,255,255,0.55))' }}
+          className="text-2xl sm:text-3xl md:text-5xl font-light text-white [text-shadow:0_0_28px_rgba(255,255,255,0.55)]"
         >
           Happy Birthday Gaurvi! 💙
         </h1>
@@ -79,13 +78,13 @@ const Finale = ({ scrollYProgress, pageIndex, totalPages }: FinaleProps) => {
         {polaroids.map((p, i) => (
           <motion.div
             key={i}
-            style={{
+          style={{
               opacity: polaroidMotions[i].op,
               y: polaroidMotions[i].y,
               rotate: polaroidMotions[i].rot,
-              filter: 'drop-shadow(0 8px 24px rgba(0,0,0,0.4))',
+              willChange: 'transform, opacity',
             }}
-            whileHover={{ scale: 1.05, rotate: 0 }}
+          whileTap={{ scale: 1.04 }}
             className="relative bg-white p-2 pb-7 w-32 sm:w-40 md:w-48 flex-shrink-0"
           >
             {/* Push-pin */}
@@ -116,7 +115,7 @@ const Finale = ({ scrollYProgress, pageIndex, totalPages }: FinaleProps) => {
 
       {/* Final message */}
       <motion.p
-        style={{ opacity: msgOp, y: msgY, filter: 'drop-shadow(0 0 10px rgba(160,200,255,0.3))' }}
+        style={{ opacity: msgOp, y: msgY }}
         className="max-w-sm sm:max-w-md text-center text-xs sm:text-sm text-blue-100 font-light leading-relaxed relative z-10 flex-shrink-0 px-4"
       >
   Here’s to another year of you being absolutely, wonderfully, irreplaceably you. 🌙 <br /><br />

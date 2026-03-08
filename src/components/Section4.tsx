@@ -34,8 +34,8 @@ const UpdateCard = ({
 
   return (
     <motion.div
-      style={{ x: xVal, opacity: opVal, boxShadow: '0 4px 24px rgba(80,150,255,0.14)' }}
-      className="backdrop-blur-lg bg-blue-400/15 border border-blue-300/35 rounded-xl px-3 py-2.5 sm:px-5 sm:py-3 flex-1 min-h-0 flex items-center"
+      style={{ x: xVal, opacity: opVal, boxShadow: '0 4px 24px rgba(80,150,255,0.18)', willChange: 'transform, opacity' }}
+      className="bg-blue-950/70 border border-blue-400/25 rounded-xl px-3 py-2.5 sm:px-5 sm:py-3 flex-1 min-h-0 flex items-center"
     >
       <p className="text-xs sm:text-sm text-blue-100 leading-relaxed font-light">
         {text}
@@ -57,7 +57,7 @@ const Section4 = ({ scrollYProgress, pageIndex, totalPages }: Section4Props) => 
   return (
     <div className="w-full h-full flex flex-col items-center px-4 sm:px-6 py-4 sm:py-6 overflow-hidden">
       <motion.h2
-        style={{ x: titleX, opacity: titleOp, filter: 'drop-shadow(0 0 18px rgba(200,220,255,0.45))' }}
+        style={{ x: titleX, opacity: titleOp }}
         className="text-xl sm:text-2xl md:text-3xl font-light text-blue-50 mb-3 text-center flex-shrink-0"
       >
         Chikki's Update
